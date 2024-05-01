@@ -3,6 +3,7 @@ import resources from './default';
 export const locales = ['en-US', 'zh-CN'] as const;
 
 export type DefaultResources = typeof resources;
+export type NS = keyof DefaultResources;
 export type Locales = (typeof locales)[number];
 
 export const normalizeLocale = (locale?: string): string => {
